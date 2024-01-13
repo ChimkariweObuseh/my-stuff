@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+	margin: auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lexend";
+	text-align: center;
+}
+
+.header,
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+	height: 200px;
+}
+
+.card {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	align-items: center;
+	border: solid black 1px;
+
+	position: sticky;
+	top: 0;
+	color: white;
+}
+
+.card img {
+	position: absolute;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	filter: brightness(0.5);
+}
+
+p {
+	width: 70vw;
+}
+
+button {
+	background: transparent;
+	padding: 10px;
+	border-radius: 100px;
+	border: solid white 2px;
+  color: white;
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: 3px 3px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+}
+
+button,
+a {
+	text-decoration: none;
+	color: white;
+	transition: 0.3s ease-in-out;
+}
+
+button:hover,
+a:hover {
+	color: black;
+}
+
+h1 {
+	font-family: "Press Start 2P", system-ui;
+	display: block;
+  }
+
+h1,
+p {
+	animation: cssScrollReveal ease-in-out both;
+	animation-range: entry 50% cover 50%;
+	animation-timeline: view();
+}
+
+@keyframes cssScrollReveal {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+  to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
